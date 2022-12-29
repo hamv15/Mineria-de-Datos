@@ -1,0 +1,1 @@
+/Users/hugomeza/Documents/Facultad de ingeniería/Semestre 2023-1/Minería de Datos/Prácticas/1 EDA/Datos/melb_data.csv
