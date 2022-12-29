@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icon/archivo.png</file>
+    <file>icon/arrow-31-48.ico</file>
+    <file>icon/arrow-96-48.ico</file>
+    <file>icon/car-4-48.ico</file>
+    <file>icon/cerebro.png</file>
+    <file>icon/codificacion.png</file>
+    <file>icon/engranaje.png</file>
+    <file>icon/group-48.ico</file>
+    <file>icon/home-4-48 (2).ico</file>
+    <file>icon/lupa.png</file>
+    <file>icon/navegador.png</file>
+    <file>icon/redeem-32.ico</file>
+    <file>icon/redeem-48.ico</file>
+    <file>icon/redeem-64.ico</file>
+    <file>icon/search-3-48.ico</file>
+    <file>icon/user-48.ico</file>
+    <file>icon/vision.png</file>
+    <file>icon/x-mark-4-32.ico</file>
+    <file>icon/x-mark-4-48.ico</file>
+  </qresource>
+</RCC>
