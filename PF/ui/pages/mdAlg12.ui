@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>886</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="styleSheet">
+         <string notr="true">border:none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="titulolabel">
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Arboles de decisión (Pronóstico)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_4">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border:none</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QPushButton" name="actualizarButton">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>0</y>
+              <width>71</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(60, 130, 241);
+border-radius:10px;
+border: 1px solid #000000;</string>
+            </property>
+            <property name="text">
+             <string>Actualizar</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="limpiarButton">
+            <property name="geometry">
+             <rect>
+              <x>100</x>
+              <y>0</y>
+              <width>71</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(60, 130, 241);
+border-radius:10px;
+border: 1px solid #000000;</string>
+            </property>
+            <property name="text">
+             <string>Limpiar</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*Vertical scrollbar*/ 
+QScrollBar:vertical {
+	border: none;
+    background-color:  rgb(255, 255, 255);
+	width: 14px;
+	border-radius: 7px;
+ }
+/*Handle bar vertical*/
+QScrollBar::handle:vertical{
+	background-color: rgb(128, 128, 128);
+	min_height:15px;
+	border-radius: 7px;
+}
+QScrollBar::handle:vertical:pressed{
+
+	background-color: rgb(78, 78, 78);
+}
+/*
+QScrollBar::handle:vertical:hover{
+	background-color: rgb(255, 0, 127);
+}
+
+
+
+
+Btn TOP-Scrollbar*/
+</string>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>858</width>
+           <height>2500</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_3">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>2500</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:none;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>13</x>
+               <y>13</y>
+               <width>321</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Mapa de Calor - Matriz de correlaciones</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_2">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>550</y>
+               <width>345</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Estandarización de datos</string>
+             </property>
+            </widget>
+            <widget class="QWidget" name="verticalLayoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>1400</y>
+               <width>691</width>
+               <height>381</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="box2"/>
+            </widget>
+            <widget class="QLabel" name="label_7">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>1820</y>
+               <width>371</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Análisis de proporción de relevancias (cargas)</string>
+             </property>
+            </widget>
+            <widget class="QTableWidget" name="relevanciasTable">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>1850</y>
+               <width>691</width>
+               <height>281</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:horizontal {
+            border: none;
+            background-color: rgb(255, 255, 255);
+            height: 14px;
+            margin: 0px 26px 0 26px;
+		  border-radius: 7px;
+        }
+
+        QScrollBar::handle:horizontal {
+		   background-color: rgb(128, 128, 128);
+            min-width: 15px;
+		  border-radius: 7px;
+        }
+QScrollBar::handle:horizontal:pressed{
+
+	background-color: rgb(78, 78, 78);
+}
+
+
+
+ 
+
+</string>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAsNeeded</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_10">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>2200</y>
+               <width>187</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eliminación de variables</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_12">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>2233</y>
+               <width>439</width>
+               <height>18</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Seleccione las variables que desee eliminar de la tabla de datos:</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="eliminarVarBoton">
+             <property name="geometry">
+              <rect>
+               <x>473</x>
+               <y>2233</y>
+               <width>200</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>21</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(233, 233, 233);
+border-radius:4px;
+border: 1px solid #000000;</string>
+             </property>
+             <property name="text">
+              <string>Elegir variables a eliminar</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../static/resource.qrc">
+               <normaloff>:/icon/icon/x-mark-4-48.ico</normaloff>:/icon/icon/x-mark-4-48.ico</iconset>
+             </property>
+            </widget>
+            <widget class="QTableWidget" name="datosFinalTable">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>2270</y>
+               <width>651</width>
+               <height>201</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:horizontal {
+            border: none;
+            background-color: rgb(255, 255, 255);
+            height: 14px;
+            margin: 0px 26px 0 26px;
+		  border-radius: 7px;
+        }
+
+        QScrollBar::handle:horizontal {
+		   background-color: rgb(128, 128, 128);
+            min-width: 15px;
+		  border-radius: 7px;
+        }
+QScrollBar::handle:horizontal:pressed{
+
+	background-color: rgb(78, 78, 78);
+}
+
+
+
+ 
+
+</string>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAsNeeded</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
+            <widget class="QWidget" name="verticalLayoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>40</y>
+               <width>691</width>
+               <height>501</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="box"/>
+            </widget>
+            <widget class="QTableWidget" name="covTable">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>930</y>
+               <width>691</width>
+               <height>241</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:horizontal {
+            border: none;
+            background-color: rgb(255, 255, 255);
+            height: 14px;
+            margin: 0px 26px 0 26px;
+		  border-radius: 7px;
+        }
+
+        QScrollBar::handle:horizontal {
+		   background-color: rgb(128, 128, 128);
+            min-width: 15px;
+		  border-radius: 7px;
+        }
+QScrollBar::handle:horizontal:pressed{
+
+	background-color: rgb(78, 78, 78);
+}
+
+
+
+ 
+
+</string>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAsNeeded</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>900</y>
+               <width>288</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Matriz de Covarianzas</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_22">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>1190</y>
+               <width>446</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Definición del número de componentes principales</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_23">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>1290</y>
+               <width>261</width>
+               <height>36</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Con ayuda de la gráfica, ingrese el 
+número de componenetes principales:</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="varAcButton">
+             <property name="geometry">
+              <rect>
+               <x>420</x>
+               <y>1300</y>
+               <width>170</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>170</width>
+               <height>21</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(233, 233, 233);
+border-radius:4px;
+border: 1px solid #000000;</string>
+             </property>
+             <property name="text">
+              <string>Varianza Acumulada</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../static/resource.qrc">
+               <normaloff>:/icon/icon/vision.png</normaloff>:/icon/icon/vision.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_24">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>1220</y>
+               <width>171</width>
+               <height>18</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Proporción de varianza:</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="propVartextEdit">
+             <property name="geometry">
+              <rect>
+               <x>200</x>
+               <y>1220</y>
+               <width>521</width>
+               <height>61</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="numCP">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>1290</y>
+               <width>111</width>
+               <height>31</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_25">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>1350</y>
+               <width>241</width>
+               <height>18</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Varianza Acumulada (Relevancia):</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="relevancia">
+             <property name="geometry">
+              <rect>
+               <x>270</x>
+               <y>1340</y>
+               <width>111</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_26">
+             <property name="geometry">
+              <rect>
+               <x>400</x>
+               <y>1330</y>
+               <width>261</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>El porcentaje de relevancia 
+debe estar entre 75% y 90%</string>
+             </property>
+            </widget>
+            <widget class="QTableWidget" name="estandarTable">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>580</y>
+               <width>691</width>
+               <height>311</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QScrollBar:horizontal {
+            border: none;
+            background-color: rgb(255, 255, 255);
+            height: 14px;
+            margin: 0px 26px 0 26px;
+		  border-radius: 7px;
+        }
+
+        QScrollBar::handle:horizontal {
+		   background-color: rgb(128, 128, 128);
+            min-width: 15px;
+		  border-radius: 7px;
+        }
+QScrollBar::handle:horizontal:pressed{
+
+	background-color: rgb(78, 78, 78);
+}
+
+
+
+ 
+
+</string>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAsNeeded</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../static/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
